@@ -17,10 +17,11 @@ export interface MyTabsProps extends TabsProps {
 
 const BaseTabs: FC<MyTabsProps> = props => {
   const { options, children, ...rest } = props;
+  const items = options.map(opt => ({ key: opt.value + '', label: opt.label }));
 
   return (
-    <Tabs {...rest} css={styles}>
-      {options ? options.map(option => <TabPane {...option} tab={option.label} key={option.value} />) : children}
+    <Tabs {...rest} css={styles} items={items}>
+      {/* {options ? options.map(option => <TabPane {...option} tab={option.label} key={option.value} />) : children} */}
     </Tabs>
   );
 };

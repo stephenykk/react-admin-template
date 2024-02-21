@@ -6,7 +6,7 @@ import { LocaleFormatter } from '@/locales';
 
 const { Title, Paragraph } = Typography;
 
-const div = <div style={{ height: 200 }}>2333</div>;
+const div = <div style={{ height: 200 }}>description content</div>;
 
 const DocumentationPage: FC = () => {
   return (
