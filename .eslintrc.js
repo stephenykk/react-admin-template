@@ -33,12 +33,12 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': 'warn',
     'prettier/prettier': ['warn'],
     'simple-import-sort/imports': [
-      'warn',
+      'off',
       {
         groups: [['^.*\\u0000$'], ['^\\u0000'], ['^@?\\w'], ['^'], ['^\\.']],
       },
     ],
-    'simple-import-sort/exports': 'warn',
+    'simple-import-sort/exports': 'off',
     'import/no-duplicates': 'warn',
     'import/newline-after-import': 'warn',
     'newline-after-var': 'warn',
