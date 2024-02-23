@@ -31,10 +31,10 @@ export default defineConfig({
     }),
     vitePluginImp({
       libList: [
-        // {
-        //   libName: 'antd',
-        //   style: name => `antd/es/${name}/style/index.css`,
-        // },
+        {
+          libName: 'antd',
+          style: name => (name === 'theme' ? false : `antd/es/${name}/style/index.js`),
+        },
         {
           libName: 'lodash',
           libDirectory: '',
@@ -52,4 +52,7 @@ export default defineConfig({
       },
     }),
   ],
+  esbuild: {
+    logOverride: { 'this-is-undefined-in-esm': 'silent' },
+  },
 });
